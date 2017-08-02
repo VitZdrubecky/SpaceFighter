@@ -11,7 +11,7 @@ import android.view.Display;
 public class GameActivity extends AppCompatActivity {
 
     //declaring gameview
-    private GameView gameView;
+    private GameView mGameView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,24 +26,24 @@ public class GameActivity extends AppCompatActivity {
 
         //Initializing game view object
         //this time we are also passing the screen size to the GameView constructor
-        gameView = new GameView(this, size.x, size.y);
+        mGameView = new GameView(this, size.x, size.y);
 
         //adding it to contentview
-        setContentView(gameView);
+        setContentView(mGameView);
     }
 
     //pausing the game when activity is paused
     @Override
     protected void onPause() {
         super.onPause();
-        gameView.pause();
+        mGameView.pause();
     }
 
     //running the game when activity is resumed
     @Override
     protected void onResume() {
         super.onResume();
-        gameView.resume();
+        mGameView.resume();
     }
 
     @Override

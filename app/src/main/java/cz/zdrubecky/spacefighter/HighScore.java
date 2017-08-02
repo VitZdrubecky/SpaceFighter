@@ -8,9 +8,9 @@ import android.widget.TextView;
 
 public class HighScore extends AppCompatActivity {
 
-    TextView textView,textView2,textView3,textView4;
+    TextView mTextView, mTextView2, mTextView3, mTextView4;
 
-    SharedPreferences sharedPreferences;
+    SharedPreferences mSharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,18 +18,18 @@ public class HighScore extends AppCompatActivity {
         setContentView(R.layout.activity_high_score);
 
         //initializing the textViews
-        textView = (TextView) findViewById(R.id.textView);
-        textView2 = (TextView) findViewById(R.id.textView2);
-        textView3 = (TextView) findViewById(R.id.textView3);
-        textView4 = (TextView) findViewById(R.id.textView4);
+        mTextView = (TextView) findViewById(R.id.textView);
+        mTextView2 = (TextView) findViewById(R.id.textView2);
+        mTextView3 = (TextView) findViewById(R.id.textView3);
+        mTextView4 = (TextView) findViewById(R.id.textView4);
 
-        sharedPreferences  = getSharedPreferences("SHAR_PREF_NAME", Context.MODE_PRIVATE);
+        mSharedPreferences = getSharedPreferences("SHAR_PREF_NAME", Context.MODE_PRIVATE);
 
         //setting the values to the textViews
-        textView.setText("1."+sharedPreferences.getInt("score1",0));
-        textView2.setText("2."+sharedPreferences.getInt("score2",0));
-        textView3.setText("3."+sharedPreferences.getInt("score3",0));
-        textView4.setText("4."+sharedPreferences.getInt("score4",0));
+        mTextView.setText("1."+ mSharedPreferences.getInt("score1",0));
+        mTextView2.setText("2."+ mSharedPreferences.getInt("score2",0));
+        mTextView3.setText("3."+ mSharedPreferences.getInt("score3",0));
+        mTextView4.setText("4."+ mSharedPreferences.getInt("score4",0));
 
 
     }

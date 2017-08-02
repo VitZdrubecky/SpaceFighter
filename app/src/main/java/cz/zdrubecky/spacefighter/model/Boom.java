@@ -1,13 +1,15 @@
-package cz.zdrubecky.spacefighter;
+package cz.zdrubecky.spacefighter.model;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
+import cz.zdrubecky.spacefighter.R;
+
 public class Boom {
 
-    //bitmap object
-    private Bitmap bitmap;
+    //mBitmap object
+    private Bitmap mBitmap;
 
     //coordinate variables
     private int x;
@@ -16,7 +18,7 @@ public class Boom {
     //constructor
     public Boom(Context context) {
         //getting boom image from drawable resource
-        bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.boom);
+        mBitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.boom);
 
         //setting the coordinate outside the screen
         //so that it won't shown up in the screen
@@ -37,11 +39,11 @@ public class Boom {
 
     //getters
     public Bitmap getBitmap() {
-        return bitmap;
+        return mBitmap;
     }
 
     public void setBitmap(Bitmap bitmap) {
-        this.bitmap = bitmap;
+        this.mBitmap = bitmap;
     }
 
     public int getX() {

@@ -1,4 +1,4 @@
-package cz.zdrubecky.spacefighter;
+package cz.zdrubecky.spacefighter.model;
 
 import java.util.Random;
 

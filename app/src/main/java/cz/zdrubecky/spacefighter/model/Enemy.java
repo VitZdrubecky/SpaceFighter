@@ -1,4 +1,4 @@
-package cz.zdrubecky.spacefighter;
+package cz.zdrubecky.spacefighter.model;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -6,6 +6,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 
 import java.util.Random;
+
+import cz.zdrubecky.spacefighter.R;
 
 public class Enemy {
 
